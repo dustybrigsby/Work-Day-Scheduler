@@ -2,7 +2,7 @@
 
 ## Description
 
-A simple day planner/scheduler that allows the user to enter their own text to each hour and save it to refer to later.
+A simple day planner/scheduler that allows the user to enter their own text to each hour and save it for later.
 
 ## Installation
 
