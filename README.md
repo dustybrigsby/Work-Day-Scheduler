@@ -2,7 +2,7 @@
 
 ## Description
 
-
+A simple day planner/scheduler that allows the user to enter their own text to each hour and save it to refer to later.
 
 ## Installation
 
@@ -10,7 +10,9 @@ No installation requirements.
 
 ## Usage
 
-
+Enter text into any hour of the day.
+The current hour is colored red, past hours are colored gray, and future hours are colored green.
+Click the save button to the right of each hour to save its text to local storage.
 
 ## Credits
 
@@ -18,8 +20,10 @@ Extentensively used the references and tutorials from:
 
 - [MDN Web Docs](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 - [W3 Schools](https://www.w3schools.com/jsref/default.asp)
-
-Instructor Ed Fallen and TA Alex Sigala helped with getting the HTML and CSS structure during office hours.
+- [Bootstrap](https://getbootstrap.com/docs/5.3/getting-started/introduction/)
+- [jQuery](https://jquery.com/)
+- [Day.js](https://day.js.org/en/)
+- [Font Awesome](https://fontawesome.com/docs)
 
 Referenced multiple activities from 05-Third-Party-APIs.
 
