@@ -14,6 +14,12 @@ Enter text into any hour of the day.
 The current hour is colored red, past hours are colored gray, and future hours are colored green.
 Click the save button to the right of each hour to save its text to local storage.
 
+- [Deployed Application](https://dustybrigsby.github.io/05-Third-Party-APIs-Challenge/)
+
+## Screenshot
+
+![Screen shot of work day scheduler web app](screenshot.png)
+
 ## Credits
 
 Extentensively used the references and tutorials from:
