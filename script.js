@@ -4,8 +4,6 @@
 $(function () {
   const now = dayjs();
   const hoursArr = $(".time-block");
-  let hour = dayjs(now).format("[hour]-HH");
-  let hourFound = false;
 
   // TODO: Add a listener for click events on the save button. This code should
   // use the id in the containing time-block as a key to save the user input in
@@ -34,7 +32,9 @@ $(function () {
   setInterval(updateHour, 60000);
 
   function updateHour() {
-    hourFound = false;
+    const hour = dayjs(now).format("[hour]-HH");
+    let hourFound = false;
+
     $.each(hoursArr, function () {
       if ($(this).attr("id") === hour) {
         $(this).removeClass("past future");

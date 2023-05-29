@@ -27,6 +27,8 @@ Extentensively used the references and tutorials from:
 
 Referenced multiple activities from 05-Third-Party-APIs.
 
+Accessed AskBCS in Slack, Youssef (yojeil) helped a lot when I was stuck on the setInterval loop.
+
 ## License
 
 MIT License.
