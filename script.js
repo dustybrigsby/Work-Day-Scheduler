@@ -13,17 +13,6 @@ $(function () {
     });
   });
 
-  // Initial call when page is loaded
-  updateHour();
-
-  // Function called every minute to keep updating as time passes
-  setInterval(updateHour, 60000);
-
-  // Gets the current time from day.js and formats it
-  function updateHour() {
-    const hour = dayjs().format("[hour]-HH");
-    let hourFound = false;
-
     // Loops through time slots to set syle classes based on what hour it is currently
     $.each(hoursArr, function () {
       if ($(this).attr("id") === hour) {
@@ -38,8 +27,7 @@ $(function () {
         $(this).addClass("future");
       }
     });
-  }
-
+  
   // Gets local stored values and displays them in their time slot if they exist
   $.each(hoursArr, function (i, element) {
     const timeSlot = $(this).attr("id");
@@ -53,6 +41,19 @@ $(function () {
     }
   });
 
+  // Gets the current time from day.js and formats it
+  function updateHour() {
+    let hour = dayjs().format("[hour]-HH");
+    // console.log(hour);
+    // hour = "hour-14";
+    let hourFound = false;
+
   // Displays current day in the header
   $("#currentDay").text(dayjs().format("dddd, MMMM Do"));
+  
+  // Initial call when page is loaded
+  updateHour();
+
+  // Function called every minute to keep updating as time passes
+  setInterval(updateHour, 60000);
 });
