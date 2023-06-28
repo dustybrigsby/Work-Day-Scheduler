@@ -13,23 +13,23 @@ $(function () {
     });
   });
 
-    // Loops through time slots to set syle classes based on what hour it is currently
-    $.each(hoursArr, function () {
-      if ($(this).attr("id") === hour) {
-        $(this).removeClass("past future");
-        $(this).addClass("present");
-        hourFound = true;
-      } else if (!hourFound) {
-        $(this).removeClass("present future");
-        $(this).addClass("past");
-      } else {
-        $(this).removeClass("past present");
-        $(this).addClass("future");
-      }
-    });
-  
+  // Loops through time slots to set syle classes based on what hour it is currently
+  $.each(hoursArr, function () {
+    if ($(this).attr("id") === hour) {
+      $(this).removeClass("past future");
+      $(this).addClass("present");
+      hourFound = true;
+    } else if (!hourFound) {
+      $(this).removeClass("present future");
+      $(this).addClass("past");
+    } else {
+      $(this).removeClass("past present");
+      $(this).addClass("future");
+    }
+  });
+
   // Gets local stored values and displays them in their time slot if they exist
-  $.each(hoursArr, function (i, element) {
+  $.each(hoursArr, function () {
     const timeSlot = $(this).attr("id");
     const textEntry = $(this).find("textarea");
 
@@ -47,10 +47,11 @@ $(function () {
     // console.log(hour);
     // hour = "hour-14";
     let hourFound = false;
+  }
 
   // Displays current day in the header
   $("#currentDay").text(dayjs().format("dddd, MMMM Do"));
-  
+
   // Initial call when page is loaded
   updateHour();
 
